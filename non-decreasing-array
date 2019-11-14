@@ -1,0 +1,16 @@
+// Not sorted Array.
+// Check if the array is non-decreasing only by modifying one element array.
+
+function check(array){
+  let a = 0;
+  for (let i=0; i < array.length-1; i++){
+  	if(array[i] > array[i+1]){
+      a++;
+      if(a > 1) return false;
+    }
+  }
+  return true;
+}
+
+console.log(check([20, 1, 2]));  // True
+console.log(check([20,2,1,20,9])); // False
